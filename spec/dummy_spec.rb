@@ -1,3 +1,4 @@
+=begin
 require "rails_helper.rb"
   describe "testing that rspec is configured" do
     it "should pass" do
@@ -7,3 +8,4 @@ require "rails_helper.rb"
       expect(false).to eq(true)
     end
   end
+=end
