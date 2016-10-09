@@ -4,6 +4,7 @@ var app = angular.module(
   [
     'ngRoute',
     'ngResource',
+    'ngMessages',
     'templates'
   ]
 ); 
@@ -71,6 +72,11 @@ app.controller("CustomerDetailController", [
     $scope.customer = Customer.get({ "customerId": $scope.customerId})
 
     // rest of the controller...
+    $scope.save = function() {
+      if ($scope.form.$valid) {
+        alert("Save!");
+      } 
+    }
 
 
     $scope.customer.billingSameAsShipping = false;
